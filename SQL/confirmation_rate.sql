@@ -1,4 +1,4 @@
-ITH d1 AS (
+WITH d1 AS (
 
     SELECT s.user_id
     ,ROUND(COUNT(CASE WHEN c.action = 'confirmed' THEN c.user_id END) / COUNT(*), 2) AS confirmation_rate
